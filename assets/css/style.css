@@ -1,6 +1,9 @@
 /* -- Utilities -- */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
 
+html {
+    height: 100%;
+}
 
 .container {
     display: flex;
@@ -82,11 +85,10 @@ header h2 {
 }
 
 .card-meal {
-    box-sizing: border-box;
     display: flex;
-    width: 18.8vh;
     flex-direction: column;
     height: 100%;
+    min-width: 300px; /* WEIRD BEHAVIOR with width -> can´t normal control it with width -- */
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -100,13 +102,13 @@ header h2 {
 .card-info {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    justify-content: center;
+    width: 172px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .meal-info > * {
-    margin: 1vh auto;
+    margin: 1vh 1.5vh;
 }
 
 .meal-title > h1 {
