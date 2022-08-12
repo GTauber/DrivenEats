@@ -31,7 +31,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0px 2vh;
+    margin: 0vh 2vh;
 }
 
 header h1 {
@@ -49,7 +49,7 @@ header h2 {
     
 }
 
-/* -- Meal Menu Section */
+/* -- Meal Menu Section -- */
 
 .meal-menu {
     display: flex;
@@ -57,7 +57,6 @@ header h2 {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: purple;
     margin: 3.8vh 0vh;
 }
 
@@ -65,8 +64,10 @@ header h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 28vh;
+    min-height: 28.5vh;
+    height: 28.5vh;
     justify-content: space-between;
+    margin-bottom: 2.96vh;
 }
 
 .group-meal > h1 {
@@ -74,61 +75,138 @@ header h2 {
     font-size: 1.65rem;
     font-weight: 500;
     color: #333333;
-    margin: 0px;
+    margin: 0vh 1.65vh;
 }
 
 .card-container {
     display: flex;
     width: 100%;
-    height: 23.5vh;
+    min-height: 23.5vh;
     overflow-x: scroll;
 }
 
+.card-container > div:first-child {
+    margin-left: 1.65vh;
+}
+
+.card-container > div:last-child {
+    margin-right: 1.65vh;
+}
+
 .card-meal {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-width: 300px; /* WEIRD BEHAVIOR with width -> can´t normal control it with width -- */
+    min-width: 19.5vh;
     background-color: white;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 0.5vh;
-    border: 1px solid #333333;
-    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
-    margin: 0vh 0.5vh;
+    border: 1px solid lightgray;
+    margin: 0vh 0.85vh;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
 
+}
+
+.img-container {
+    margin-top: 1vh;
 }
 
 .card-info {
     display: flex;
     flex-direction: column;
-    width: 172px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .meal-info > * {
     margin: 1vh 1.5vh;
 }
 
+.meal-info {
+    width: 100%;
+}
+
 .meal-title > h1 {
-    
+
+    padding-left: 2px;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
 }
 
 .meal-desc > p {
+    text-align: start;
+    padding-left: 2px;
     font-size: 1rem;
     font-weight: 300;
     color: #A6A6A6;
+    max-width: 150px;
 }
 
 .meal-price {
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.meal-price > p, .meal-price > strong {
+.meal-price > p {
+    padding-left: 2px;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.meal-price > p, strong {
     font-weight: 400;
     text-align: start;
+}
+
+/* -- Footer -- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    height: 10vh;
+}
+
+footer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    border: 1px solid lightcyan;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.order p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+footer .order:hover {
+    box-shadow: none;
+}
+
+
+/* Dynamic classes */
+
+.select-border {
+    border: 4px solid rgb(69, 248, 69);
+    box-shadow: 0px 0px 10px -4px rgba(117, 117, 117, 0.25);
+}
+
+.select-circle {
+    height: 19px;
 }
