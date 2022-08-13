@@ -97,7 +97,7 @@ const order = () => {
     let lunch;
     let drink;
     let dessert;
-    let total;
+    let total = 0;
     if(meals.length === 3) {
         meals.forEach(meal => {
             if(meal.meal === 'lunch') {
@@ -107,9 +107,9 @@ const order = () => {
             } else if(meal.meal === 'dessert') {            
                 dessert = meal.name;
             }
-            total += meal.value;
+            
+            total += Number(meal.value.replace(',', '.'));
         });
-        
         let orderString = `Olá, gostaria de fazer o pedido:\r- Prato: ${lunch}\n
         - Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: R$ ${total.toFixed(2)}`;
         
