@@ -110,7 +110,7 @@ const order = () => {
             
             total += Number(meal.value.replace(',', '.'));
         });
-        let orderString = `Olá, gostaria de fazer o pedido:\r- Prato: ${lunch}\n
+        let orderString = `Olá, gostaria de fazer o pedido:\n- Prato: ${lunch}\n
         - Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: R$ ${total.toFixed(2)}`;
         
         str = `https://wa.me/5519992444889?text=${encodeURIComponent(orderString)}`;
