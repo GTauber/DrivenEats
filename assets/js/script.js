@@ -113,8 +113,8 @@ const order = () => {
         let orderString = `Olá, gostaria de fazer o pedido:\n- Prato: ${lunch}\n
         - Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: R$ ${total.toFixed(2)}`;
         
-        str = `https://wa.me/5519992444889?text=${encodeURIComponent(orderString)}`;
-
+        str = `https://wa.me/5519992004000?text=${encodeURIComponent(orderString)}`;
+9
         window.open(str, '_blank');
 
     // Olá, gostaria de fazer o pedido:
