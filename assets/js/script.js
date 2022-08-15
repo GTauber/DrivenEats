@@ -88,6 +88,7 @@ const validateButton = () => {
     const button = document.querySelector('.js-button');
     if (meals.length === 3) {
         button.classList.add('order-valid');
+        button.querySelector('p').innerText = 'Pedir';
     } else {
         button.classList.remove('order-valid');
     }
