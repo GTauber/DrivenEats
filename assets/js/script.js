@@ -91,6 +91,7 @@ const validateButton = () => {
         button.querySelector('p').innerText = 'Pedir';
     } else {
         button.classList.remove('order-valid');
+        button.querySelector('p').innerText = 'Selecione os 3 itens para fechar o pedido';
     }
 };
 
